@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.luo.luo_study.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.luo.luo_study.model.entity.User">
+            <id property="userId" column="userId" jdbcType="CHAR"/>
+            <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>
+            <result property="userPassword" column="userPassword" jdbcType="VARCHAR"/>
+            <result property="userAvatar" column="userAvatar" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="birthday" column="birthday" jdbcType="DATE"/>
+            <result property="qq" column="qq" jdbcType="VARCHAR"/>
+            <result property="weChat" column="weChat" jdbcType="VARCHAR"/>
+            <result property="registerTime" column="registerTime" jdbcType="TIMESTAMP"/>
+            <result property="lastLoginTime" column="lastLoginTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        userId,userAccount,userPassword,
+        userAvatar,email,mobile,
+        gender,birthday,qq,
+        weChat,registerTime,lastLoginTime,
+        isDelete
+    </sql>
+</mapper>
